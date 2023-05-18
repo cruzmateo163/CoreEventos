@@ -14,6 +14,7 @@
 <div class="container"> 
 	<h1 th:text="${titulo}"></h1>
 	<a th:href="@{eventos/create}" class="btn btn-primary">Agregar Eventos</a>
+	
 </div> 
 <div class="container"> 
 	<table class="table table-sm">
@@ -43,8 +44,8 @@
 	      <td th:text="${ev.pais.nombre}"></td>
 	      <td th:text="${ev.provincia.nombre}"></td>
 	      <td th:text="${ev.ciudad.nombre}"></td>
-	      <td><a th:href="@{/eventos/edit/{id} }" class="btn btn-warning">Editar</a></td>
-	      <td><a th:href="@{/eventos/delete/{id} }" class="btn btn-danger">Eliminar</a></td>
+	      <td><a th:href="@{/eventos/edit/{id} (id=${ev.idEvento})}" class="btn btn-warning">Editar</a></td>
+	      <td><a th:href="@{/eventos/delete/{id} (id=${ev.idEvento}) }" class="btn btn-danger">Eliminar</a></td>
 	    </tr>
 	    </div> 
 	 </tbody>

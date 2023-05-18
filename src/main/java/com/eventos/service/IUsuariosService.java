@@ -10,5 +10,6 @@ public interface IUsuariosService {
 	public void guardarUser(Usuarios usuario);
 	public Usuarios buscarUserPorId(Integer id);
 	public void eliminarUser(Integer id);
+	public Usuarios validar(String usuario, String clave);
 	
 }

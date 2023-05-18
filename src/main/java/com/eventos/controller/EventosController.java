@@ -87,8 +87,8 @@ public class EventosController {
 	}
 	
 	@GetMapping("/edit/{id}")
-	public String edit(@PathVariable("id") Integer id, Model model) {
-		Eventos evento = eventosService.buscarEventoPorId(id);
+	public String edit(@PathVariable("id") Integer idEvento, Model model) {
+		Eventos evento = eventosService.buscarEventoPorId(idEvento);
 		logg.info("Objeto recuperado {}", evento);
 		List<Paises> listPais = paisesService.listaPaises();
 		List<Provincias> listProvincia = provinciasService.listaProvincias();
@@ -100,6 +100,7 @@ public class EventosController {
 		model.addAttribute("provincia", listProvincia);
 		model.addAttribute("ciudad", listCiudad);
 		return "agregar-eventos";
+		
 	}
 	
 	
